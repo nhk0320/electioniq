@@ -29,7 +29,7 @@ Guidelines:
 Example questions you should answer well: "How does the Lok Sabha election work?", "What are the steps to register for a Voter ID?", "What is an EVM and VVPAT?"
 """
 
-@router.post("/")
+@router.post("")
 async def chat_with_assistant(request: ChatRequest):
     if not os.getenv("GEMINI_API_KEY"):
         raise HTTPException(status_code=500, detail="Gemini API Key is not configured on the server.")

@@ -14,7 +14,7 @@ Provide a clear, simple, and non-partisan definition for the requested Indian el
 The definition should be easy to understand for a first-time voter (1-3 sentences maximum).
 """
 
-@router.post("/")
+@router.post("")
 async def define_term(request: TermRequest):
     if not os.getenv("GEMINI_API_KEY"):
         raise HTTPException(status_code=500, detail="Gemini API Key is not configured on the server.")

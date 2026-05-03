@@ -16,7 +16,7 @@ Each object should have:
 - "explanation": string (a short explanation of why the answer is correct)
 """
 
-@router.get("/")
+@router.get("")
 async def get_quiz():
     if not os.getenv("GEMINI_API_KEY"):
         raise HTTPException(status_code=500, detail="Gemini API Key is not configured on the server.")
