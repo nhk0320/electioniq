@@ -32,7 +32,7 @@ const ChatAssistant = () => {
 
     try {
       // In a real app, you'd use an environment variable for the API URL
-      const response = await axios.post('http://127.0.0.1:8000/api/chat', {
+      const response = await axios.post('/api/chat', {
         message: userMessage
       });
       

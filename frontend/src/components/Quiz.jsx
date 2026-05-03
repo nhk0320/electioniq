@@ -15,7 +15,7 @@ const Quiz = () => {
     setQuizState('loading');
     setError(null);
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/quiz');
+      const response = await axios.get('/api/quiz');
       setQuestions(response.data.quiz);
       setQuizState('ready');
       resetQuizState();

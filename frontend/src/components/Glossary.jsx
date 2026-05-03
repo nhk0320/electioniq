@@ -31,7 +31,7 @@ const Glossary = () => {
     setDefinition(null);
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/glossary', {
+      const response = await axios.post('/api/glossary', {
         term: query
       });
       setDefinition(response.data);
