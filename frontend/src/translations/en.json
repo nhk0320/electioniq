@@ -1,0 +1,46 @@
+{
+  "appTitle": "ElectionIQ",
+  "heroTitle": "Understand the ",
+  "heroHighlight": "Indian Election",
+  "heroSubtitle": "Process",
+  "heroDesc": "Your interactive guide to how democracy works in India, from voter registration to the formation of the government.",
+  "tabProcess": "Process Timeline",
+  "tabAssistant": "Election Assistant",
+  "tabQuiz": "Knowledge Quiz",
+  "tabGlossary": "Dictionary",
+  "tabGuide": "Voter Guide",
+  "tabBooth": "Find Booth",
+  "footerText": "Designed for educational, non-partisan purposes.",
+
+  "guideTitle": "The Layman's Voter Guide",
+  "guideSubtitle": "Everything you need to know about voting in India, simplified.",
+  
+  "step1Title": "1. Are You Eligible?",
+  "step1Desc": "To vote in India, you must be an Indian citizen and at least 18 years old on the qualifying date (usually Jan 1st of the year).",
+  "step1Action": "Check Eligibility",
+
+  "step2Title": "2. Get Registered",
+  "step2Desc": "Fill out Form 6 online on the Voter Services Portal (voters.eci.gov.in) or offline to get your Voter ID (EPIC card).",
+  
+  "step3Title": "3. What to Carry?",
+  "step3Desc": "You need your Voter Slip AND a valid ID (like Voter ID, Aadhaar Card, PAN Card, Driving License, or Passport).",
+  "step3Note": "Where to get the slip? Your Booth Level Officer (BLO) usually drops it at your home, or you can download it online.",
+
+  "step4Title": "4. Inside the Booth",
+  "step4Desc": "1. Officer checks your ID. 2. Your finger is inked. 3. You sign the register. 4. Go to the EVM (Electronic Voting Machine) and press the button next to your chosen candidate. A beep confirms your vote!",
+  
+  "step5Title": "5. How is the Winner Decided?",
+  "step5Desc": "India uses 'First-Past-The-Post'. The candidate with the most votes in a constituency wins. The party that wins the majority of seats (over 50%) forms the government.",
+
+  "boothTitle": "Find Your Election Booth",
+  "boothSubtitle": "Enter your details to locate your polling station.",
+  "boothInputEpic": "Enter EPIC Number (Voter ID)",
+  "boothInputPin": "Enter Pincode",
+  "boothSearchBtn": "Search Booth",
+  "boothSearching": "Locating securely...",
+  "boothResultTitle": "Your Polling Station",
+  "boothResultRoom": "Room No.",
+  "boothResultAddress": "Address",
+  "boothResultOfficer": "Booth Level Officer (BLO)",
+  "boothSimulatedNote": "Note: This is a simulated result for educational purposes."
+}
