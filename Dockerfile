@@ -20,22 +20,6 @@ COPY backend/ .
 # Copy built frontend static files into the backend folder so FastAPI can serve them
 COPY --from=frontend-builder /app/frontend/dist /app/backend/static
 
-# Update main.py to serve static files
-RUN echo "\n\
-from fastapi.staticfiles import StaticFiles\n\
-from fastapi.responses import FileResponse\n\
-import os\n\
-\n\
-# Serve static files from the 'static' directory\n\
-app.mount('/assets', StaticFiles(directory='static/assets'), name='assets')\n\
-\n\
-# Catch-all route to serve the React app\n\
-@app.get('/{catchall:path}')\n\
-def serve_react_app(catchall: str):\n\
-    if catchall.startswith('api/'):\n\
-        return {'detail': 'Not Found'}\n\
-    return FileResponse('static/index.html')\n\
-" >> main.py
 
 # Expose port (Cloud Run defaults to 8080)
 EXPOSE 8080

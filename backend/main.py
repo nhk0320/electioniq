@@ -30,6 +30,20 @@ app.include_router(chat.router, prefix="/api/chat", tags=["Chat"])
 app.include_router(quiz.router, prefix="/api/quiz", tags=["Quiz"])
 app.include_router(glossary.router, prefix="/api/glossary", tags=["Glossary"])
 
-@app.get("/")
-async def root():
-    return {"message": "Welcome to ElectionIQ API"}
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+import os
+
+# Serve static files from the 'static' directory if it exists
+if os.path.exists("static"):
+    app.mount("/assets", StaticFiles(directory="static/assets"), name="assets")
+
+    @app.get("/{catchall:path}")
+    async def serve_react_app(catchall: str):
+        if catchall.startswith("api/"):
+            return {"detail": "Not Found"}
+        return FileResponse("static/index.html")
+else:
+    @app.get("/")
+    async def root():
+        return {"message": "Welcome to ElectionIQ API (Static files not found)"}
