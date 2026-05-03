@@ -68,7 +68,7 @@ const Quiz = () => {
   if (quizState === 'loading') {
     return (
       <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12 flex flex-col items-center justify-center min-h-[400px]">
-        <Loader2 className="animate-spin text-blue-600 mb-4" size={48} />
+        <Loader2 className="animate-spin text-orange-600 mb-4" size={48} />
         <h3 className="text-xl font-bold text-gray-800">Generating your dynamic quiz...</h3>
         <p className="text-gray-500 mt-2">Our AI is creating fresh questions about the election process.</p>
       </div>
@@ -83,7 +83,7 @@ const Quiz = () => {
         <p className="text-red-600 mb-6 text-center max-w-md">{error}</p>
         <button 
           onClick={fetchQuiz}
-          className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+          className="flex items-center gap-2 bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors"
         >
           <RefreshCw size={20} /> Try Again
         </button>
@@ -94,14 +94,14 @@ const Quiz = () => {
   if (quizState === 'ready') {
     return (
       <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12 flex flex-col items-center justify-center min-h-[400px] text-center">
-        <Award className="text-blue-600 mb-6" size={64} />
+        <Award className="text-orange-600 mb-6" size={64} />
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Election Knowledge Check</h2>
         <p className="text-xl text-gray-600 mb-8 max-w-lg">
           Test what you've learned with this 5-question AI-generated quiz. The questions are different every time!
         </p>
         <button 
           onClick={handleStart}
-          className="bg-red-600 hover:bg-red-700 text-white text-xl font-bold px-10 py-4 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1"
+          className="bg-green-600 hover:bg-green-700 text-white text-xl font-bold px-10 py-4 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1"
         >
           Start Quiz
         </button>
@@ -138,7 +138,7 @@ const Quiz = () => {
         <div className="flex gap-4">
           <button 
             onClick={fetchQuiz}
-            className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            className="flex items-center gap-2 bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors"
           >
             <RefreshCw size={20} /> Generate New Quiz
           </button>
@@ -155,7 +155,7 @@ const Quiz = () => {
       {/* Progress Bar */}
       <div className="w-full bg-gray-200 h-2">
         <div 
-          className="bg-blue-600 h-2 transition-all duration-300" 
+          className="bg-orange-600 h-2 transition-all duration-300" 
           style={{ width: `${((currentQuestionIdx) / questions.length) * 100}%` }}
         ></div>
       </div>
@@ -163,7 +163,7 @@ const Quiz = () => {
       <div className="p-8">
         <div className="flex justify-between items-end mb-6">
           <span className="text-sm font-bold text-gray-500 uppercase tracking-wider">Question {currentQuestionIdx + 1} of {questions.length}</span>
-          <span className="text-sm font-bold text-blue-600 uppercase tracking-wider">Score: {score}</span>
+          <span className="text-sm font-bold text-orange-600 uppercase tracking-wider">Score: {score}</span>
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-8 leading-tight">
@@ -223,7 +223,7 @@ const Quiz = () => {
             <button 
               onClick={handleCheckAnswer}
               disabled={!selectedAnswer}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               Check Answer
             </button>

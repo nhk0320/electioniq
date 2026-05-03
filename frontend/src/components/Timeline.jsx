@@ -6,49 +6,49 @@ const steps = [
     id: 1,
     title: "Voter Registration",
     icon: <Users size={24} />,
-    color: "bg-blue-100 text-blue-600 border-blue-500",
-    description: "The first step is registering to vote. Each state has its own deadlines and rules for registration.",
-    details: "You must be a U.S. citizen, meet your state's residency requirements, and be 18 years old on or before Election Day. Many states allow online registration, while others require paper forms."
+    color: "bg-orange-100 text-orange-600 border-orange-500",
+    description: "The first step is getting your name on the electoral roll. The Election Commission of India (ECI) manages this process.",
+    details: "You must be an Indian citizen, at least 18 years old on the qualifying date (usually Jan 1), and a resident of the polling area. You can apply for a Voter ID (EPIC) online via the NVSP portal or physically through a Booth Level Officer (BLO)."
   },
   {
     id: 2,
-    title: "Primaries & Caucuses",
+    title: "Election Notification",
     icon: <Megaphone size={24} />,
-    color: "bg-red-100 text-red-600 border-red-500",
-    description: "States hold primaries or caucuses to help political parties choose their presidential nominees.",
-    details: "In a primary, people vote by secret ballot. In a caucus, local party members gather to discuss candidates and vote publicly. These events determine how many delegates each candidate gets."
+    color: "bg-green-100 text-green-600 border-green-500",
+    description: "The ECI announces the election schedule and implements the Model Code of Conduct (MCC).",
+    details: "Once the dates are announced, the MCC comes into force to ensure free and fair elections. It sets guidelines for political parties and candidates, preventing the ruling party from using government resources for campaigning."
   },
   {
     id: 3,
-    title: "National Conventions",
+    title: "Nomination of Candidates",
     icon: <Building2 size={24} />,
-    color: "bg-blue-100 text-blue-600 border-blue-500",
-    description: "Political parties hold conventions to officially nominate their candidates for President and Vice President.",
-    details: "During conventions, delegates from all states vote to confirm their party's choice. The nominated presidential candidate also officially announces their running mate (Vice President)."
+    color: "bg-orange-100 text-orange-600 border-orange-500",
+    description: "Candidates file their nomination papers with the Returning Officer.",
+    details: "Political parties distribute 'tickets' to their chosen candidates. Independent candidates can also file nominations. Candidates must declare their assets, criminal background, and educational qualifications."
   },
   {
     id: 4,
-    title: "General Election Campaign",
+    title: "Election Campaign",
     icon: <Calendar size={24} />,
-    color: "bg-red-100 text-red-600 border-red-500",
-    description: "Candidates campaign nationwide to win the support of the general public.",
-    details: "This phase includes presidential debates, campaign rallies, and extensive advertising. Candidates focus heavily on 'swing states' where the race is expected to be close."
+    color: "bg-green-100 text-green-600 border-green-500",
+    description: "Candidates and parties campaign to win over voters in their constituencies.",
+    details: "Campaigning includes rallies, door-to-door canvassing, and media advertisements. The campaign officially ends 48 hours before the start of polling (the 'silence period') to give voters time to think."
   },
   {
     id: 5,
-    title: "Election Day",
+    title: "Polling Day",
     icon: <Vote size={24} />,
-    color: "bg-blue-100 text-blue-600 border-blue-500",
-    description: "Voters across the country cast their ballots for President on the Tuesday after the first Monday in November.",
-    details: "When citizens vote, they are actually voting for a slate of electors who have pledged to support that candidate in the Electoral College."
+    color: "bg-orange-100 text-orange-600 border-orange-500",
+    description: "Voters cast their votes using Electronic Voting Machines (EVMs) at designated polling booths.",
+    details: "Voters verify their identity and press the button next to their chosen candidate's symbol on the EVM. A Voter Verifiable Paper Audit Trail (VVPAT) machine prints a slip allowing the voter to verify their vote was recorded correctly."
   },
   {
     id: 6,
-    title: "Electoral College",
+    title: "Counting & Results",
     icon: <CheckCircle2 size={24} />,
-    color: "bg-red-100 text-red-600 border-red-500",
-    description: "Electors cast the official votes for President in December. A candidate needs 270 electoral votes to win.",
-    details: "Each state gets a certain number of electors based on its representation in Congress. The candidate who wins the popular vote in a state usually wins all of that state's electoral votes."
+    color: "bg-green-100 text-green-600 border-green-500",
+    description: "Votes are counted under tight security, and the results are declagreen.",
+    details: "The candidate with the most votes in a constituency is declagreen the winner (First Past the Post system). In a general election, the party or coalition with a majority of seats in the Lok Sabha forms the government."
   }
 ];
 
@@ -57,7 +57,7 @@ const Timeline = () => {
 
   return (
     <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">The Path to the Presidency</h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">The Path to Forming a Government</h2>
       
       <div className="flex flex-col md:flex-row gap-8">
         {/* Timeline Visualization */}
@@ -102,7 +102,7 @@ const Timeline = () => {
               
               <h2 className="text-3xl font-bold text-gray-900 mb-2">Step {step.id}: {step.title}</h2>
               
-              <div className="h-1 w-20 bg-blue-600 rounded-full mb-6"></div>
+              <div className="h-1 w-20 bg-orange-600 rounded-full mb-6"></div>
               
               <p className="text-xl text-gray-700 mb-6 leading-relaxed font-medium">
                 {step.description}
@@ -126,7 +126,7 @@ const Timeline = () => {
                 <button 
                   onClick={() => setActiveStep(Math.min(steps.length, activeStep + 1))}
                   disabled={activeStep === steps.length}
-                  className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+                  className="px-4 py-2 text-sm font-medium text-white bg-orange-600 rounded-md hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
                 >
                   Next Step
                 </button>

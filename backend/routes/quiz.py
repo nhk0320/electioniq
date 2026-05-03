@@ -6,8 +6,8 @@ import json
 router = APIRouter()
 
 SYSTEM_INSTRUCTION = """
-You are an expert on the US election process.
-Generate exactly 5 multiple-choice questions about the US election process (e.g., registration, primaries, electoral college).
+You are an expert on the Indian election process.
+Generate exactly 5 multiple-choice questions about the Indian election process (e.g., voter registration, Lok Sabha, Election Commission of India, EVMs).
 Return the result ONLY as a valid JSON array of objects. Do not include markdown code blocks, just the raw JSON.
 Each object should have:
 - "question": string
