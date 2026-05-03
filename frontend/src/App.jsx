@@ -7,6 +7,7 @@ import Quiz from './components/Quiz'
 import Glossary from './components/Glossary'
 import VoterGuide from './components/VoterGuide'
 import BoothLocator from './components/BoothLocator'
+import Helpline from './components/Helpline'
 
 function App() {
   const [activeTab, setActiveTab] = useState('guide')
@@ -62,6 +63,12 @@ function App() {
                   <option value="hi">हिंदी (Hindi)</option>
                   <option value="ta">தமிழ் (Tamil)</option>
                   <option value="te">తెలుగు (Telugu)</option>
+                  <option value="bn">বাংলা (Bengali)</option>
+                  <option value="mr">मराठी (Marathi)</option>
+                  <option value="gu">ગુજરાતી (Gujarati)</option>
+                  <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                  <option value="ml">മലയാളം (Malayalam)</option>
+                  <option value="or">ଓଡ଼ିଆ (Odia)</option>
                 </select>
               </div>
 
@@ -113,6 +120,12 @@ function App() {
                 <option value="hi">हिंदी</option>
                 <option value="ta">தமிழ்</option>
                 <option value="te">తెలుగు</option>
+                <option value="bn">বাংলা</option>
+                <option value="mr">मराठी</option>
+                <option value="gu">ગુજરાતી</option>
+                <option value="kn">ಕನ್ನಡ</option>
+                <option value="ml">മലയാളം</option>
+                <option value="or">ଓଡ଼ିଆ</option>
               </select>
             </div>
             {tabs.map(tab => (
@@ -154,6 +167,9 @@ function App() {
           {renderContent()}
         </div>
       </main>
+
+      {/* Floating Helpline Component */}
+      <Helpline />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-10 text-center mt-12 border-t border-gray-800">
