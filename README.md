@@ -39,6 +39,5 @@ ElectionIQ is an interactive, full-stack web application designed to help usersâ
 1. **Node.js** (v18+)
 2. **Python** (v3.10+)
 3. **Google Gemini API Key**: Get one from Google AI Studio.
-<<<<<<< HEAD
-=======
+
 
