@@ -37,6 +37,7 @@ const VoterGuide = () => {
       title: t('step1Title'),
       desc: t('step1Desc'),
       icon: <CheckCircle className="text-green-500 w-8 h-8 group-hover:scale-110 transition-transform" />,
+      image: "https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=1000&auto=format&fit=crop",
       customAction: (
         <button 
           onClick={() => setShowEligibility(!showEligibility)}
@@ -50,7 +51,8 @@ const VoterGuide = () => {
       id: 2,
       title: t('step2Title'),
       desc: t('step2Desc'),
-      icon: <FileText className="text-blue-500 w-8 h-8 group-hover:scale-110 transition-transform" />
+      icon: <FileText className="text-blue-500 w-8 h-8 group-hover:scale-110 transition-transform" />,
+      image: "https://images.unsplash.com/photo-1555848962-6e79363ec58f?q=80&w=1000&auto=format&fit=crop"
     },
     {
       id: 3,
@@ -63,7 +65,8 @@ const VoterGuide = () => {
       id: 4,
       title: t('step4Title'),
       desc: t('step4Desc'),
-      icon: <Vote className="text-purple-500 w-8 h-8 group-hover:scale-110 transition-transform" />
+      icon: <Vote className="text-purple-500 w-8 h-8 group-hover:scale-110 transition-transform" />,
+      image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1000&auto=format&fit=crop"
     },
     {
       id: 5,
@@ -89,7 +92,13 @@ const VoterGuide = () => {
             
             <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] glass-card p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-t-transparent hover:border-t-orange-500">
               <h3 className="font-bold text-2xl text-gray-800 mb-2">{step.title}</h3>
-              <p className="text-gray-600 leading-relaxed mb-3 text-lg">{step.desc}</p>
+              <p className="text-gray-600 leading-relaxed mb-4 text-lg">{step.desc}</p>
+              
+              {step.image && (
+                <div className="mb-4 rounded-xl overflow-hidden shadow-md">
+                  <img src={step.image} alt={step.title} className="w-full h-auto object-cover max-h-48 hover:scale-105 transition-transform duration-500" onError={(e) => { e.target.style.display = 'none' }} />
+                </div>
+              )}
               
               {step.note && (
                 <div className="bg-orange-50/80 border-l-4 border-orange-500 p-4 mt-4 rounded-r-lg">

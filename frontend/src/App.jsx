@@ -157,9 +157,12 @@ function App() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
             {t('heroTitle')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-green-600">{t('heroHighlight')}</span> {t('heroSubtitle')}
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
             {t('heroDesc')}
           </p>
+          <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+            <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?q=80&w=1000&auto=format&fit=crop" alt="Vote India" className="w-full h-auto object-cover max-h-96" onError={(e) => { e.target.style.display = 'none' }} />
+          </div>
         </div>
 
         {/* Dynamic Content Area */}
